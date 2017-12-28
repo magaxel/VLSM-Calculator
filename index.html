@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script src="assets/jquery-3.2.1.js"></script>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>VLSM-calc</h1>        
+    <form id="form">
+        Major network:<br>
+        <input id="network" type="text" name="network" value="192.168.0.0"><br>
+        Netmask prefix:<br>
+        <input id="netmask" type="text" name="netmask" value="24"><br>
+        Number of hosts per network:<br>
+        <input id="hosts" type="text" name="hosts" value="126,19,10,2"><br>
+        <input id="submit" type="submit" value="Submit">
+      </form>
+
+      <table id="output"> </table>
+      <script src="assets/index.js"></script>
+</body>
+
+</html>
