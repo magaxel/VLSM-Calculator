@@ -84,20 +84,20 @@ var gui = (function () {
 
     var printAllNetworks = function (majorNetwork) {
         gui.setOutput("<tr>");
-        gui.addOutput("<th>Network ID</th>");
-        gui.addOutput("<th>Netmask</th>");
-        gui.addOutput("<th>Prefix</th>");
-        gui.addOutput("<th>First host</th>");
-        gui.addOutput("<th>Last host</th>");
-        gui.addOutput("<th>Broadcast</th>");
-        gui.addOutput("<th>Hosts available</th>");
+        gui.addOutput('<th class="legend">Network ID</th>');
+        gui.addOutput('<th class="legend">Netmask</th>');
+        gui.addOutput('<th class="legend">Prefix</th>');
+        gui.addOutput('<th class="legend">First host</th>');
+        gui.addOutput('<th class="legend">Last host</th>');
+        gui.addOutput('<th class="legend">Broadcast</th>');
+        gui.addOutput('<th class="legend">Hosts available</th>');
         gui.addOutput("</tr>");
         gui.addOutput("<tr>");
-        gui.addOutput("<th>Major network</th>");
+        gui.addOutput('<th class="table-heading" colspan=100%>Major network</th>');
         gui.addOutput("</tr>");
         gui.printNetwork(majorNetwork);
         gui.addOutput("<tr>");
-        gui.addOutput("<th>Minor networks</th>");
+        gui.addOutput('<th class="table-heading" colspan=100%>Minor networks</th>');
         gui.addOutput("</tr>");
         majorNetwork.minorNetworks.forEach(function (network) {
             gui.printNetwork(network);
@@ -386,10 +386,10 @@ $("#form").submit(function (event) {
             gui.printAllNetworks(majorNetwork);
         }
         else {
-            gui.setOutput("<p #error>Network too small</p>");
+            gui.setOutput('<p class="error">Network too small</p>');
         }
     }
     else {
-        gui.setOutput("<p #error>Input field error</p>");
+        gui.setOutput('<p class="error">Input field error</p>');
     }
 });
